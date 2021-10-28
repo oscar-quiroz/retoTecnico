@@ -1,0 +1,17 @@
+<div>
+    <h1>
+
+        Galeria- Album {{nAlbum}}</h1>
+
+    <div class="cont">
+        <button style="margin-right:5px;" class="btn btn-success" (click)="changeAlbum(-1)"> Anteriro album</button>
+
+        <button class="btn btn-primary" (click)="changeAlbum(1)"> Siguiente album</button>
+
+    </div>
+
+
+    <div class="grid-gallery">
+        <app-card *ngFor="let imgs of images" data-toggle="modal" data-target="#exampleModal" class="grid-gallery__item" [img]="imgs.url" [valor]="'200'"></app-card>
+    </div>
+</div>
